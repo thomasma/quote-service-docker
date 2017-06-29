@@ -1,0 +1,8 @@
+# Forge configuration
+organization: twitface
+workdir: work
+docker-repo: registry.hub.docker.com/mattazoidorg
+user: mattazoid
+password: >
+  anVuZ2xlMTA=
+  
