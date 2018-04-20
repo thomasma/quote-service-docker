@@ -12,13 +12,12 @@ import com.aver.notetaker.domain.Quote;
 @RestController
 @RequestMapping("/quotes")
 public class QuoteServiceEndPoint {
-    protected final static Logger LOGGER = LoggerFactory
-            .getLogger(QuoteServiceEndPoint.class);
+    protected final static Logger LOGGER = LoggerFactory.getLogger(QuoteServiceEndPoint.class);
 
     @Autowired
     private QuoteService quoteService;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
     public Quote getQuote() {
         return quoteService.getRandomQuote();
     }
